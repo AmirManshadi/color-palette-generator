@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import {
 	Button,
 	Drawer,
@@ -9,15 +10,17 @@ import {
 	DrawerOverlay,
 	Input,
 } from "@chakra-ui/react"
+import { Context } from "../context/AppContext"
 
-interface SideDrawerPropsType {
-	isOpen: boolean
-	onClose: () => void
-}
-
-export default function SideDrawer({ isOpen, onClose }: SideDrawerPropsType) {
+export default function SideDrawer() {
+	const { isDrawerOpen, onDrawerClose } = useContext(Context)
 	return (
-		<Drawer isOpen={isOpen} placement="right" onClose={onClose} size="sm">
+		<Drawer
+			isOpen={isDrawerOpen as boolean}
+			placement="right"
+			onClose={onDrawerClose as () => void}
+			size="sm"
+		>
 			<DrawerOverlay />
 			<DrawerContent bg="#11213e" color="white">
 				<DrawerCloseButton />
@@ -28,7 +31,7 @@ export default function SideDrawer({ isOpen, onClose }: SideDrawerPropsType) {
 				</DrawerBody>
 
 				<DrawerFooter>
-					<Button variant="outline" mr={3} onClick={onClose}>
+					<Button variant="outline" mr={3} onClick={onDrawerClose}>
 						Cancel
 					</Button>
 					<Button colorScheme="blue">Save</Button>

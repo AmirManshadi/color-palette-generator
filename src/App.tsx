@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import RootLayout from "./layouts/RootLayout"
+import AppContext from "./context/AppContext"
 
 const router = createBrowserRouter([
 	{
@@ -9,7 +10,11 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-	return <RouterProvider router={router} />
+	return (
+		<AppContext>
+			<RouterProvider router={router} />
+		</AppContext>
+	)
 }
 
 export default App
