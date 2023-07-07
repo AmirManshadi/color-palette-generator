@@ -1,5 +1,6 @@
-import { Button, HStack, Heading, Image, Text } from "@chakra-ui/react"
+import { HStack, Heading, Image, Text } from "@chakra-ui/react"
 import logo from "../assets/rgb.png"
+import MenuButton from "./MenuButton"
 
 interface HeaderPropsType {
 	onOpen: () => void
@@ -28,16 +29,7 @@ export default function Header({ onOpen }: HeaderPropsType) {
 					Generator
 				</Text>
 			</HStack>
-			<Button
-				variant="outline"
-				borderColor="#38ad65"
-				_hover={{ bg: "#38ad6545" }}
-				colorScheme="purple"
-				w="12"
-				borderRadius="100%"
-				h="12"
-				onClick={onOpen}
-			></Button>
+			<MenuButton onClick={onOpen}></MenuButton>
 		</Heading>
 	)
 }
