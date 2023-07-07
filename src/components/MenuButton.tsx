@@ -1,4 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react"
+import { colors } from "../assets/colors/mainColors"
 
 interface MenuButtonPropsType {
 	onClick: () => void
@@ -15,9 +16,9 @@ export default function MenuButton({ onClick }: MenuButtonPropsType) {
 			cursor="pointer"
 			onClick={onClick}
 		>
-			<Box w="10" h="1" borderRadius="2" bg="#26A6FE"></Box>
-			<Box w="10" h="1" borderRadius="2" bg="#FE5694"></Box>
-			<Box w="10" h="1" borderRadius="2" bg="#FEA613"></Box>
+			<Box w="10" h="1" borderRadius="2" bg={colors.logo.blue}></Box>
+			<Box w="10" h="1" borderRadius="2" bg={colors.logo.orange}></Box>
+			<Box w="10" h="1" borderRadius="2" bg={colors.logo.pink}></Box>
 		</Flex>
 	)
 }

@@ -1,6 +1,7 @@
 import { HStack, Heading, Image, Text } from "@chakra-ui/react"
 import logo from "../assets/rgb.png"
 import MenuButton from "./MenuButton"
+import { colors } from "../assets/colors/mainColors"
 
 interface HeaderPropsType {
 	onOpen: () => void
@@ -10,7 +11,6 @@ export default function Header({ onOpen }: HeaderPropsType) {
 	return (
 		<Heading
 			as="h1"
-			color="#ffffff"
 			display="flex"
 			justifyContent="space-between"
 			alignItems="center"
@@ -19,13 +19,13 @@ export default function Header({ onOpen }: HeaderPropsType) {
 		>
 			<Image w="12" aspectRatio="1/1" src={logo}></Image>
 			<HStack display={["none", "flex"]} textAlign="center" spacing="2">
-				<Text as="span" color="blue.400">
+				<Text as="span" color={colors.logo.blue}>
 					Color
 				</Text>
-				<Text as="span" color="orange">
+				<Text as="span" color={colors.logo.orange}>
 					Palette
 				</Text>
-				<Text as="span" color="pink.400">
+				<Text as="span" color={colors.logo.pink}>
 					Generator
 				</Text>
 			</HStack>
