@@ -1,7 +1,11 @@
 import { Button, HStack, Heading, Image, Text } from "@chakra-ui/react"
 import logo from "../assets/rgb.png"
 
-export default function Header() {
+interface HeaderPropsType {
+	onOpen: () => void
+}
+
+export default function Header({ onOpen }: HeaderPropsType) {
 	return (
 		<Heading
 			as="h1"
@@ -32,6 +36,7 @@ export default function Header() {
 				w="12"
 				borderRadius="100%"
 				h="12"
+				onClick={onOpen}
 			></Button>
 		</Heading>
 	)
