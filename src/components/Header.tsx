@@ -17,7 +17,7 @@ export default function Header({ onOpen }: HeaderPropsType) {
 			p="4"
 		>
 			<Image w="12" aspectRatio="1/1" src={logo}></Image>
-			<HStack textAlign="center" spacing="2">
+			<HStack display={["none", "flex"]} textAlign="center" spacing="2">
 				<Text as="span" color="blue.400">
 					Color
 				</Text>
