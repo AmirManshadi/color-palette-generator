@@ -11,14 +11,19 @@ export default function MenuButton({ onClick }: MenuButtonPropsType) {
 			width="10"
 			h="10"
 			flexDir="column"
-			justify="space-around"
+			justify="center"
 			align="center"
+			gap="1.5"
 			cursor="pointer"
 			onClick={onClick}
+			transition="gap 200ms"
+			_hover={{
+				gap: "2",
+			}}
 		>
-			<Box w="10" h="1" borderRadius="2" bg={colors.logo.blue}></Box>
-			<Box w="10" h="1" borderRadius="2" bg={colors.logo.orange}></Box>
-			<Box w="10" h="1" borderRadius="2" bg={colors.logo.pink}></Box>
+			<Box w="8" h="1" borderRadius="2" bg={colors.logo.blue}></Box>
+			<Box w="8" h="1" borderRadius="2" bg={colors.logo.orange}></Box>
+			<Box w="8" h="1" borderRadius="2" bg={colors.logo.pink}></Box>
 		</Flex>
 	)
 }
