@@ -3,11 +3,10 @@ import logo from "../assets/rgb.png"
 import MenuButton from "./MenuButton"
 import { colors } from "../assets/colors/mainColors"
 
-interface HeaderPropsType {
-	onOpen: () => void
-}
 
-export default function Header({ onOpen }: HeaderPropsType) {
+export default function Header() {
+	
+
 	return (
 		<Heading
 			as="h1"
@@ -29,7 +28,7 @@ export default function Header({ onOpen }: HeaderPropsType) {
 					Generator
 				</Text>
 			</HStack>
-			<MenuButton onClick={onOpen}></MenuButton>
+			<MenuButton></MenuButton>
 		</Heading>
 	)
 }

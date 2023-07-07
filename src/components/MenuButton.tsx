@@ -1,11 +1,10 @@
 import { Box, Flex } from "@chakra-ui/react"
 import { colors } from "../assets/colors/mainColors"
+import { useContext } from "react"
+import { Context } from "../context/AppContext"
 
-interface MenuButtonPropsType {
-	onClick: () => void
-}
-
-export default function MenuButton({ onClick }: MenuButtonPropsType) {
+export default function MenuButton() {
+	const { onDrawerOpen } = useContext(Context)
 	return (
 		<Flex
 			width="10"
@@ -15,7 +14,7 @@ export default function MenuButton({ onClick }: MenuButtonPropsType) {
 			align="center"
 			gap="1.5"
 			cursor="pointer"
-			onClick={onClick}
+			onClick={onDrawerOpen as () => void}
 			transition="gap 200ms"
 			_hover={{
 				gap: "2",
