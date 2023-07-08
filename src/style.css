@@ -1,0 +1,10 @@
+body {
+	width: 100%;
+	height: 100dvh;
+	background-image: radial-gradient(
+		circle farthest-corner at 100px 100px,
+		#11213e 10%,
+		#090e11 90%
+	) !important;
+	background-attachment: fixed !important;
+}

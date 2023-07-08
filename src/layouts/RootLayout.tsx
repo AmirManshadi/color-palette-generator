@@ -6,9 +6,8 @@ import SideDrawer from "../components/Drawer"
 export default function RootLayout() {
 	return (
 		<Box
-			bgGradient="radial(circle farthest-corner at 100px 100px, #11213e 10%, #090e11 90%)"
 			w="100%"
-			h="100dvh"
+			h="100%"
 		>
 			<Header />
 			<SideDrawer />
@@ -22,7 +21,6 @@ export default function RootLayout() {
 					"1400px",
 				]}
 			>
-				<Outlet />
 			</Container>
 		</Box>
 	)
