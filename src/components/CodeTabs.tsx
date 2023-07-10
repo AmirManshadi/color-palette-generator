@@ -1,5 +1,6 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react"
 import { colors } from "../assets/colors/mainColors"
+import CodeSnippet from "./CodeSnippet"
 
 export default function CodeTabs() {
 	return (
@@ -15,7 +16,7 @@ export default function CodeTabs() {
 					color={colors.logo.orange}
 					sx={{ "&[aria-selected=true]": { color: colors.logo.orange } }}
 				>
-					JSS
+					EMOTION
 				</Tab>
 				<Tab
 					color={colors.logo.pink}
@@ -25,15 +26,15 @@ export default function CodeTabs() {
 				</Tab>
 			</TabList>
 
-			<TabPanels color="whiteAlpha.800">
+			<TabPanels color="whiteAlpha.800" fontFamily="'DM Sans', sans-serif" fontSize="lg">
 				<TabPanel>
-					<p>one!</p>
+					<CodeSnippet technology="css" />
 				</TabPanel>
 				<TabPanel>
-					<p>two!</p>
+					<CodeSnippet technology="emotion" />
 				</TabPanel>
 				<TabPanel>
-					<p>three!</p>
+					<CodeSnippet technology="sass" />
 				</TabPanel>
 			</TabPanels>
 		</Tabs>
