@@ -2,6 +2,7 @@ import { Box, Container, Grid, GridItem } from "@chakra-ui/react"
 import Header from "../components/Header"
 import SideDrawer from "../components/Drawer"
 import PaletteContainer from "../components/PaletteContainer"
+import CodeTabs from "../components/CodeTabs"
 
 export default function RootLayout() {
 	return (
@@ -40,7 +41,7 @@ export default function RootLayout() {
 						bg={"blackAlpha.500"}
 						borderRadius="md"
 						mb={["5", null, null, "0"]}
-					></GridItem>
+					><CodeTabs /></GridItem>
 				</Grid>
 			</Container>
 		</Box>
